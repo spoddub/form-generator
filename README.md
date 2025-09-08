@@ -1,5 +1,5 @@
-[![CI](https://github.com/spoddub/rails-project-63/actions/workflows/ci.yml/badge.svg)](https://github.com/spoddub/rails-project-63/actions/workflows/ci.yml)
-[![hexlet-check](https://github.com/spoddub/rails-project-63/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/spoddub/rails-project-63/actions/workflows/hexlet-check.yml)
+[![CI](https://github.com/spoddub/form-generator/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/spoddub/form-generator/actions/workflows/ci.yml)
+[![hexlet-check](https://github.com/spoddub/form-generator/actions/workflows/hexlet-check.yml/badge.svg?branch=main)](https://github.com/spoddub/form-generator/actions/workflows/hexlet-check.yml)
 
 # Form Generator
 
