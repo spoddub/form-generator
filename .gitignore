@@ -6,3 +6,15 @@
 /pkg/
 /spec/reports/
 /tmp/
+/vendor/
+/.bundle/
+/pkg/
+/checksums/
+/coverage/
+/doc/
+/tmp/
+/log/
+/.yardoc
+/*.gem
+.DS_Store
+/Gemfile.lock

@@ -14,13 +14,12 @@ Gem::Specification.new do |spec|
   spec.license               = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.2")
 
-
-spec.metadata = {
-  "homepage_uri" => "https://github.com/spoddub/form-generator",
-  "source_code_uri" => "https://github.com/spoddub/form-generator",
-  "changelog_uri" => "https://github.com/spoddub/form-generator/blob/main/CHANGELOG.md",
-  "rubygems_mfa_required" => "true"
-}
+  spec.metadata = {
+    "homepage_uri" => "https://github.com/spoddub/form-generator",
+    "source_code_uri" => "https://github.com/spoddub/form-generator",
+    "changelog_uri" => "https://github.com/spoddub/form-generator/blob/main/CHANGELOG.md",
+    "rubygems_mfa_required" => "true"
+  }
 
   gemspec = File.basename(__FILE__)
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
