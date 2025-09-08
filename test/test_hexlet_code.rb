@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "test_helper"
-require "hexlet_code"
+require 'test_helper'
+require 'hexlet_code'
 
 class TestHexletCode < Minitest::Test
   def test_that_it_has_a_version_number
