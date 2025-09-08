@@ -8,13 +8,16 @@ Gem::Specification.new do |spec|
   spec.authors = ["Sergei Poddubny"]
   spec.email = ["108150454+spoddub@users.noreply.github.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Form Generator – Ruby DSL for building HTML forms"
+  spec.description = "A small library for generating HTML forms in templates with a simple, declarative DSL. Inspired by Rails form helpers and Simple Form; focused on predictable output and TDD-friendly design."
+  spec.homepage = "https://github.com/spoddub/rails-project-63?tab=readme-ov-file"
   spec.license = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.2")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata = {
+    "homepage_uri" => "https://github.com/spoddub/rails-project-63",
+    "source_code_uri" => "https://github.com/spoddub/rails-project-63",
+  }
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
