@@ -3,28 +3,25 @@
 require_relative "lib/hexlet_code/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "hexlet_code"
-  spec.version = HexletCode::VERSION
-  spec.authors = ["Sergei Poddubny"]
-  spec.email = ["108150454+spoddub@users.noreply.github.com"]
+  spec.name                  = "hexlet_code"
+  spec.version               = HexletCode::VERSION
+  spec.authors               = ["Sergei Poddubny"]
+  spec.email                 = ["108150454+spoddub@users.noreply.github.com"]
 
-  spec.summary = "Form Generator – Ruby DSL for building HTML forms"
-  spec.description = "A small library for generating HTML forms in templates with a simple, declarative DSL. Inspired by Rails form helpers and Simple Form; focused on predictable output and TDD-friendly design."
-  spec.homepage = "https://github.com/spoddub/rails-project-63?tab=readme-ov-file"
-  spec.license = "MIT"
+  spec.summary               = "Form Generator – Ruby DSL for building HTML forms"
+  spec.description           = "A small library for generating HTML forms in templates with a simple, declarative DSL. Inspired by Rails form helpers and Simple Form; focused on predictable output and TDD-friendly design."
+  spec.homepage = "https://github.com/spoddub/form-generator"
+  spec.license               = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.2")
 
-  spec.metadata = {
-    "homepage_uri" => "https://github.com/spoddub/rails-project-63",
-    "source_code_uri" => "https://github.com/spoddub/rails-project-63",
-  }
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+spec.metadata = {
+  "homepage_uri" => "https://github.com/spoddub/form-generator",
+  "source_code_uri" => "https://github.com/spoddub/form-generator",
+  "changelog_uri" => "https://github.com/spoddub/form-generator/blob/main/CHANGELOG.md",
+  "rubygems_mfa_required" => "true"
+}
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   gemspec = File.basename(__FILE__)
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
     ls.readlines("\x0", chomp: true).reject do |f|
@@ -32,13 +29,8 @@ Gem::Specification.new do |spec|
         f.start_with?(*%w[bin/ test/ spec/ features/ .git .github appveyor Gemfile])
     end
   end
-  spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+
+  spec.bindir       = "exe"
+  spec.executables  = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
-
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
 end
