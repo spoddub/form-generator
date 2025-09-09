@@ -5,7 +5,7 @@ require 'hexlet_code'
 
 User = Struct.new(:name, :job, keyword_init: true)
 
-class FormForTest < MiniTest::Test
+class FormForTest < Minitest::Test
   def setup
     @user = User.new(name: 'rob')
   end
