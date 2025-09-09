@@ -13,16 +13,15 @@ Form Generator is a small Ruby library for building HTML forms in application te
 ```bash
 make lint
 make test
-
+````
 ## This project was built using these tools
 
-| Tool                                             | Description                                                                 |
-| ------------------------------------------------ | --------------------------------------------------------------------------- |
-| [Ruby 3.2.2](https://www.ruby-lang.org/)         | The programming language the library is written in.                         |
-| [rbenv](https://github.com/rbenv/rbenv)          | Per-project Ruby version manager used to pin **3.2.2** (`.ruby-version`).   |
-| [Bundler](https://bundler.io/)                   | Dependency management and gem scaffolding (`bundle gem`, `bundle install`). |
-| [Rake](https://ruby.github.io/rake/)             | Task runner for building, testing and release tasks (see `rake -T`).        |
-| [Make](https://www.gnu.org/software/make/)       | Developer shortcuts: `make install`, `make lint`, `make test`.              |
-| [Minitest](https://github.com/minitest/minitest) | Test framework used for TDD of the form DSL.                                |
-| [RuboCop](https://rubocop.org/)                  | Linter/formatter enforcing consistent Ruby style.                           |
-````
+| Tool | Description |
+|------|-------------|
+| [Ruby 3.2.2](https://www.ruby-lang.org/) | The programming language the library is written in. |
+| [rbenv](https://github.com/rbenv/rbenv) | Per-project Ruby version manager used to pin **3.2.2** (`.ruby-version`). |
+| [Bundler](https://bundler.io/) | Dependency management and gem scaffolding (`bundle gem`, `bundle install`). |
+| [Rake](https://ruby.github.io/rake/) | Task runner for building, testing and release tasks (see `rake -T`). |
+| [Make](https://www.gnu.org/software/make/) | Developer shortcuts: `make install`, `make lint`, `make test`. |
+| [Minitest](https://github.com/minitest/minitest) | Test framework used for TDD of the form DSL. |
+| [RuboCop](https://rubocop.org/) | Linter/formatter enforcing consistent Ruby style. |
