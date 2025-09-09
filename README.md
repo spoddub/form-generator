@@ -20,6 +20,7 @@ user = User.new(name: 'rob', job: 'hexlet', gender: 'm')
 html = HexletCode.form_for(user) do |f|
   f.input :name                          # => <input name="name" type="text" value="rob">
   f.input :job, as: :text, rows: 50, cols: 50
+  f.submit                               # => <input type="submit" value="Save">
 end
 
 puts html
