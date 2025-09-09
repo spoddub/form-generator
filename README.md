@@ -11,7 +11,7 @@ Form Generator is a small Ruby library for building HTML forms in application te
 
 ## Usage
 
-```ruby
+````ruby
 require 'hexlet_code'
 
 User = Struct.new(:name, :job, :gender, keyword_init: true)
@@ -25,6 +25,12 @@ end
 puts html
 # <form action="#" method="post"><input name="name" type="text" value="rob"><textarea name="job" cols="50" rows="50">hexlet</textarea></form>
 
+## Run
+
+```bash
+make lint
+make test
+
 ## This project was built using these tools
 
 | Tool                                             | Description                                                                 |
@@ -36,4 +42,4 @@ puts html
 | [Make](https://www.gnu.org/software/make/)       | Developer shortcuts: `make install`, `make lint`, `make test`.              |
 | [Minitest](https://github.com/minitest/minitest) | Test framework used for TDD of the form DSL.                                |
 | [RuboCop](https://rubocop.org/)                  | Linter/formatter enforcing consistent Ruby style.                           |
-```
+````
