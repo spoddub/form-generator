@@ -9,6 +9,7 @@ Form Generator is a small Ruby library for building HTML forms in application te
 
 - Ruby **3.2.2**
 
+## Run
 
 ```bash
 make lint
