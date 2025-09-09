@@ -9,23 +9,6 @@ Form Generator is a small Ruby library for building HTML forms in application te
 
 - Ruby **3.2.2**
 
-## Usage
-
-````ruby
-require 'hexlet_code'
-
-User = Struct.new(:name, :job, :gender, keyword_init: true)
-user = User.new(name: 'rob', job: 'hexlet', gender: 'm')
-
-html = HexletCode.form_for(user) do |f|
-  f.input :name
-  f.input :job, as: :text, rows: 50, cols: 50
-end
-
-puts html
-# <form action="#" method="post"><input name="name" type="text" value="rob"><textarea name="job" cols="50" rows="50">hexlet</textarea></form>
-
-## Run
 
 ```bash
 make lint
