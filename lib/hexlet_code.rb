@@ -11,6 +11,7 @@ module HexletCode
     form_attrs = { action:, method: }.merge(options)
     builder = FormBuilder.new(entity)
     block&.call(builder)
+    body = builder.render
     Tag.build('form', form_attrs) { body }
   end
 end

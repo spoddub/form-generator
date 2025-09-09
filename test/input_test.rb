@@ -9,16 +9,17 @@ class InputTest < Minitest::Test
   def setup
     @user = User.new(name: 'rob', job: 'hexlet', gender: 'm')
   end
+
   def test_text_and_textarea_defaults
     html = HexletCode.form_for(@user) do |f|
       f.input :name
-      f.input :job as: :text
+      f.input :job, as: :text
     end
-  expected = '<form action="#" method="post">' \
+    expected = '<form action="#" method="post">' \
                '<input name="name" type="text" value="rob">' \
                '<textarea name="job" cols="20" rows="40">hexlet</textarea>' \
                '</form>'
-  assert_equal expected, html
+    assert_equal expected, html
   end
 
   def test_input_with_extra_attrs
@@ -27,11 +28,12 @@ class InputTest < Minitest::Test
       f.input :job
     end
     expected = '<form action="#" method="post">' \
-                '<input name="name" type="text" value="rob" class="user-input">' \
-                '<input name="job" type="text" value="hexlet">' \
-                '</form>'
+               '<input name="name" type="text" value="rob" class="user-input">' \
+               '<input name="job" type="text" value="hexlet">' \
+               '</form>'
     assert_equal expected, html
   end
+
   def test_textarea_override_rows_cols
     html = HexletCode.form_for(@user) do |f|
       f.input :job, as: :text, rows: 50, cols: 50

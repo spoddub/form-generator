@@ -10,23 +10,28 @@ module HexletCode
     def input(name, as: :input, **attrs)
       value = @entity.public_send(name)
 
-      case as
-      when :text
-        # textarea: дефолтные cols/rows, можно переопределить через attrs
-        defaults = { name: name, cols: 20, rows: 40 }
-        options = defaults.merge(attrs)
-        @fields << Tag.build('textarea', options) { value.to_s }
-      else
-        # обычный input type="text"
-        options = { name: name, type: 'text', value: value.to_s }.merge(attrs)
-        @fields << Tag.build('input', options)
-      end
-
+      @fields << if as == :text
+                   build_textarea(name, value, **attrs)
+                 else
+                   build_input(name, value, **attrs)
+                 end
       nil
     end
 
     def render
       @fields.join
+    end
+
+    private
+
+    def build_textarea(name, value, **attrs)
+      options = { name: name, cols: 20, rows: 40 }.merge(attrs)
+      Tag.build('textarea', options) { value.to_s }
+    end
+
+    def build_input(name, value, **attrs)
+      options = { name: name, type: 'text', value: value.to_s }.merge(attrs)
+      Tag.build('input', options)
     end
   end
 end
