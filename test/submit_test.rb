@@ -25,7 +25,7 @@ SUBMIT_EXPECTED_CUSTOM =
 
 class SubmitTest < Minitest::Test
   def setup
-    @user = SubmitUser.new(job: 'hexlet')
+    @user = SubmitUser.new(job: 'hexlet') # name => nil
   end
 
   def build_form(options = {}, &)

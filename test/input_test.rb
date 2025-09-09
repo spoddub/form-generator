@@ -9,6 +9,7 @@ INPUT_EXPECTED_DEFAULTS =
   '<form action="#" method="post">' \
   '<label for="name">Name</label>' \
   '<input name="name" type="text" value="rob">' \
+  '<label for="job">Job</label>' \
   '<textarea name="job" cols="20" rows="40">hexlet</textarea>' \
   '</form>'
 
@@ -22,6 +23,7 @@ INPUT_EXPECTED_EXTRA_ATTRS =
 
 INPUT_EXPECTED_TEXTAREA_OVERRIDE =
   '<form action="#" method="post">' \
+  '<label for="job">Job</label>' \
   '<textarea name="job" cols="50" rows="50">hexlet</textarea>' \
   '</form>'
 
@@ -30,7 +32,6 @@ class InputTest < Minitest::Test
     @user = InputUser.new(name: 'rob', job: 'hexlet', gender: 'm')
   end
 
-  # Хелпер, чтобы короче было в самих тестах
   def build_form(options = {}, &)
     HexletCode.form_for(@user, **options, &)
   end
