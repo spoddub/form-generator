@@ -11,7 +11,7 @@ module HexletCode
       value = @entity.public_send(name)
 
       if as == :text
-        @fields << build_textarea(name, value, **atrrs)
+        @fields << build_textarea(name, value, **attrs)
       else
         @fields << build_label(name)
         @fields << build_input(name, value, **attrs)
@@ -30,6 +30,10 @@ module HexletCode
     end
 
     private
+
+    def build_label(name)
+      Tag.build('label', for: name) { name.to_s.capitalize }
+    end
 
     def build_textarea(name, value, **attrs)
       options = { name: name, cols: 20, rows: 40 }.merge(attrs)

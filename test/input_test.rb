@@ -15,10 +15,13 @@ class InputTest < Minitest::Test
       f.input :name
       f.input :job, as: :text
     end
+
     expected = '<form action="#" method="post">' \
+               '<label for="name">Name</label>' \
                '<input name="name" type="text" value="rob">' \
                '<textarea name="job" cols="20" rows="40">hexlet</textarea>' \
                '</form>'
+
     assert_equal expected, html
   end
 
@@ -27,10 +30,14 @@ class InputTest < Minitest::Test
       f.input :name, class: 'user-input'
       f.input :job
     end
+
     expected = '<form action="#" method="post">' \
+               '<label for="name">Name</label>' \
                '<input name="name" type="text" value="rob" class="user-input">' \
+               '<label for="job">Job</label>' \
                '<input name="job" type="text" value="hexlet">' \
                '</form>'
+
     assert_equal expected, html
   end
 
