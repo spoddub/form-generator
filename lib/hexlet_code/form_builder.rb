@@ -10,11 +10,18 @@ module HexletCode
     def input(name, as: :input, **attrs)
       value = @entity.public_send(name)
 
-      @fields << if as == :text
-                   build_textarea(name, value, **attrs)
-                 else
-                   build_input(name, value, **attrs)
-                 end
+      if as == :text
+        @fields << build_textarea(name, value, **atrrs)
+      else
+        @fields << build_label(name)
+        @fields << build_input(name, value, **attrs)
+      end
+      nil
+    end
+
+    def submit(text = 'Save', **attrs)
+      options = { type: 'submit', value: text }.merge(attrs)
+      @fields << Tag.build('input', options)
       nil
     end
 
