@@ -3,11 +3,11 @@
 require 'test_helper'
 require 'hexlet_code'
 
-User = Struct.new(:name, :job, keyword_init: true)
+FormUser = Struct.new(:name, :job, keyword_init: true)
 
 class FormForTest < Minitest::Test
   def setup
-    @user = User.new(name: 'rob')
+    @user = FormUser.new(name: 'rob')
   end
 
   def test_empty_form_with_defaults

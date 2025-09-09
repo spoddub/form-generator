@@ -3,11 +3,11 @@
 require 'test_helper'
 require 'hexlet_code'
 
-User = Struct.new(:name, :job, :gender, keyword_init: true)
+InputUser = Struct.new(:name, :job, :gender, keyword_init: true)
 
 class InputTest < Minitest::Test
   def setup
-    @user = User.new(name: 'rob', job: 'hexlet', gender: 'm')
+    @user = InputUser.new(name: 'rob', job: 'hexlet', gender: 'm')
   end
 
   def test_text_and_textarea_defaults
