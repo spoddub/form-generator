@@ -20,7 +20,6 @@ module HexletCode
       return '' if attrs.nil? || attrs.empty?
 
       attrs
-        .sort_by { |k, _| k.to_s }
         .map { |k, v| " #{k}=\"#{v}\"" }
         .join
     end
